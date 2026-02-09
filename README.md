@@ -43,14 +43,17 @@ Designed for **time tracking, reporting, auditing, and accounting** use cases.
 ---
 
 ## Repository Structure
-├── LICENSE
-├── README.md
-├── ubuntu
-│   ├── jira-export-logwork.conf
-│   └── jira-export-logwork-multiuser.sh
-└── window
-    ├── jira-export-logwork.conf
-    └── jira-export-logwork-multiuser.bat
+
+```text
+.
+├─ LICENSE
+├─ README.md
+├─ ubuntu
+│  ├─ jira-export-logwork.conf
+│  └─ jira-export-logwork-multiuser.sh
+└─ window
+   ├─ jira-export-logwork.conf
+   └─ jira-export-logwork-multiuser.bat
 
 ## Usage
 
@@ -62,7 +65,8 @@ chmod +x jira-export-logwork-multiuser.sh
 ./jira-export-logwork-multiuser.sh or ./jira-export-logwork-multiuser.sh -c path/to/jira-export-logwork.conf
 
 ## Output Structure
-jira_worklogs_export_YYYYMMDD_HHMMSS/
+```text
+.
 ├─ user_a_example_com/
 │  ├─ summary.csv
 │  └─ detail.csv
