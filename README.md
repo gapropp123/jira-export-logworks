@@ -1,6 +1,8 @@
 # Jira Export Logwork (Multi-user)
 
-A command-line utility to export **Jira worklogs for multiple users**, supporting both **Windows (Batch + PowerShell)** and **Linux/macOS (Bash)**.  
+A command-line utility to export **Jira worklogs for multiple users**, supporting both  
+**Windows (Batch + PowerShell)** and **Linux/macOS (Bash)**.
+
 Designed for **time tracking, reporting, auditing, and accounting** use cases.
 
 ---
@@ -11,7 +13,7 @@ Designed for **time tracking, reporting, auditing, and accounting** use cases.
 - Automatically resolve Jira `accountId` from user email
 - Filter worklogs by:
   - JQL scope
-  - Date range (FROM / TO)
+  - Date range (`FROM` / `TO`)
 - Generate CSV reports:
   - `summary.csv` – total time per issue
   - `detail.csv` – detailed worklogs
@@ -54,22 +56,54 @@ Designed for **time tracking, reporting, auditing, and accounting** use cases.
 └─ window
    ├─ jira-export-logwork.conf
    └─ jira-export-logwork-multiuser.bat
+```
+
+---
 
 ## Usage
 
-## Windows (Batch + PowerShell):
-Run by double-clicking: jira-export-logwork-multiuser.bat
+### Windows (Batch + PowerShell)
 
-## Linux / macOS (Bash):
+Run by double-clicking:
+```
+jira-export-logwork-multiuser.bat
+```
+
+---
+
+### Linux / macOS (Bash)
+
+Make the script executable:
+```bash
 chmod +x jira-export-logwork-multiuser.sh
-./jira-export-logwork-multiuser.sh or ./jira-export-logwork-multiuser.sh -c path/to/jira-export-logwork.conf
+```
+
+Run with default config:
+```bash
+./jira-export-logwork-multiuser.sh
+```
+
+Run with custom config:
+```bash
+./jira-export-logwork-multiuser.sh -c path/to/jira-export-logwork.conf
+```
+
+---
 
 ## Output Structure
+
 ```text
-.
+jira_worklogs_export_YYYYMMDD_HHMMSS/
 ├─ user_a_example_com/
 │  ├─ summary.csv
 │  └─ detail.csv
-├─ user_b_example_com/
-│  ├─ summary.csv
-│  └─ detail.csv
+└─ user_b_example_com/
+   ├─ summary.csv
+   └─ detail.csv
+```
+
+---
+
+## License
+
+Internal / Private use
