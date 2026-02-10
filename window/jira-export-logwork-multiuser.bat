@@ -233,11 +233,11 @@ foreach($userEmail in $users){
   Write-Host "JQL: $jql"
 
   $issues = Search-Issues -Base $base -Headers $headers -Jql $jql
-  Write-Host "Issues: $($issues.Count)"
+  Write-Host "Issues: $(@($issues).Count)"
 
   $grandSeconds = 0
 
-  foreach($iss in $issues){
+  foreach($iss in @($issues)){
     $key = $iss.Key
     $sum = $iss.Summary
     $issueTotalSeconds = 0
