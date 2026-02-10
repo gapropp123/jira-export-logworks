@@ -88,6 +88,11 @@ Run with custom config:
 ./jira-export-logwork-multiuser.sh -c path/to/jira-export-logwork.conf
 ```
 
+Generate your API Token via this link:
+```bash
+https://id.atlassian.com/manage-profile/security/api-tokens
+```
+
 ---
 
 ## Output Structure
